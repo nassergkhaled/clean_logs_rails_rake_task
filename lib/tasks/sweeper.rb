@@ -1,4 +1,7 @@
-require_relative '../../lib/sweepers/task_sweep'
+Dir.glob("#{File.dirname(__FILE__)}/../../lib/sweepers/*.rb").each do |file|
+  require file
+end
+
 
 class Sweeper
   # Define the SWEEPERS_DIR constant as the path to the sweepers directory
